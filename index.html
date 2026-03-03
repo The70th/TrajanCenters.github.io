@@ -20,15 +20,39 @@
     --accent-pale: #F7EEE1;
     --rule: #D6D2CA;
   }
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f8f6;
+    --bg-card: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #555555;
+    --text-muted: #888888;
+    --border-color: #e8e8e4;
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --stat-bg: #f0ede8;
+}
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #111111;
+        --bg-secondary: #1a1a1a;
+        --bg-card: #1e1e1e;
+        --text-primary: #f0f0f0;
+        --text-secondary: #aaaaaa;
+        --text-muted: #666666;
+        --border-color: #2e2e2e;
+        --nav-bg: rgba(17, 17, 17, 0.95);
+        --stat-bg: #252525;
+    }
+}
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   html { scroll-behavior: smooth; }
 
   body {
     font-family: 'DM Sans', sans-serif;
-    background: var(--white);
-    color: var(--ink);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     font-weight: 300;
     line-height: 1.6;
     overflow-x: hidden;
@@ -813,16 +837,16 @@
   <div class="about-left reveal">
     <div class="about-photo-wrap">
       <span class="about-badge">PMP · Ross BBA · U.S. Army Vet</span>
-      <img class="about-photo" src="20240925_124256.jpg" alt="Trajan Centers" />
+      <img class="about-photo" src="Fishing.jpg" alt="Trajan Centers holding a fish he caught" />
       <div class="about-photo-accent"></div>
     </div>
   </div>
   <div class="about-body reveal">
     <p class="section-label">About Me</p>
     <h2 class="section-title">Operator by training.<br><em>Builder</em> by nature.</h2>
-    <p>I'm a PMP-certified Digital Product Manager with a track record of turning complex, high-stakes digital products into measurable business wins. Most recently at Rocket Mortgage, I owned the VA Loan segment of a regulated acquisition funnel — driving a 40% year-over-year increase in lead submissions and contributing to Rocket's rise from #5 to #3 nationally in VA loan volume.</p>
-    <p>Before that, I spent three years as a Growth PM running 120+ A/B experiments across a major fintech platform, and four years at Accenture leading enterprise modernization and change management for Fortune 500 clients and state government agencies. I started my career as a Field Artillery specialist in the 82nd Airborne Division — which is where I learned to operate with precision under pressure.</p>
-    <p>Outside of product work, I'm a landlord and property renovator in Metro Detroit, a community advocate who's received recognition from the Michigan State Legislature, and someone who genuinely loves building things — including using AI to make my own work faster and better.</p>
+    <p>I've spent my whole life betting on myself. I joined the Army at 18 because I saw it clearly: short-term pain, long-term gain. It paid for my degree at Michigan Ross. Ross got me into Accenture. Accenture taught me that you can walk into any organization, develop a strong plan, and deliver. That instinct has driven everything since.</p>
+    <p>I work the way I do because I've never been afraid not to know something. I ask questions because I'd rather look uninformed for thirty seconds than make the wrong call for three months. In practice, that means I build shared understanding fast. I run tight, well-scoped projects with clear expectations. I push for root causes over symptoms. I deliver organized, high-value work as a result.</p>
+    <p>Outside of work, I'm a Detroiter through and through: president of my neighborhood watch, member of the Ford/Dearborn Astronomy Club, landlord and hands-on renovator, and one of the most social people you'll meet. I've lived in three countries, visited fourteen, and I'd still pick Detroit every time. I live here with my partner Sophie, our dog Daisy, and our cat Cait.</p>
     <div class="credentials">
       <div class="credential-item"><span class="dot"></span>PMP — Project Management Institute, 2026</div>
       <div class="credential-item"><span class="dot"></span>BBA — University of Michigan, Ross School of Business</div>
