@@ -67,9 +67,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 3rem;
-    background: rgba(250,250,248,0.9);
+    background: var(--nav-bg);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--rule);
+    border-bottom: 1px solid var(--border-color);
   }
 
   .nav-logo {
@@ -78,7 +78,7 @@
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--dark);
+    color: var(--text-primary);
     text-decoration: none;
   }
 
@@ -93,7 +93,7 @@
     font-size: 0.7rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--mid-grey);
+    color: var(--text-muted);
     text-decoration: none;
     transition: color 0.2s;
   }
@@ -131,7 +131,7 @@
     font-size: clamp(3.5rem, 6vw, 5.5rem);
     font-weight: 300;
     line-height: 1.05;
-    color: var(--dark);
+    color: var(--text-primary);
     margin-bottom: 1.5rem;
     opacity: 0;
     animation: fadeUp 0.7s ease 0.35s forwards;
@@ -145,7 +145,7 @@
   .hero-desc {
     font-size: 1.05rem;
     font-weight: 300;
-    color: var(--mid-grey);
+    color: var(--text-muted);
     line-height: 1.75;
     max-width: 480px;
     margin-bottom: 2.5rem;
@@ -164,8 +164,8 @@
   .btn-primary {
     display: inline-block;
     padding: 0.85rem 2rem;
-    background: var(--dark);
-    color: var(--white);
+    background: var(--text-primary);
+    color: var(--bg-primary);
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.2em;
@@ -182,8 +182,8 @@
   .btn-secondary {
     display: inline-block;
     padding: 0.85rem 2rem;
-    border: 1px solid var(--rule);
-    color: var(--ink);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
     font-family: 'DM Mono', monospace;
     font-size: 0.65rem;
     letter-spacing: 0.2em;
@@ -213,14 +213,14 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 0.4rem 0.8rem;
-    background: var(--off-white);
-    border: 1px solid var(--rule);
-    color: var(--mid-grey);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
   }
 
   .hero-right {
     position: relative;
-    background: var(--off-white);
+    background: var(--bg-secondary);
     overflow: hidden;
     opacity: 0;
     animation: fadeIn 1s ease 0.4s forwards;
@@ -238,15 +238,15 @@
   .hero-photo-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, var(--off-white) 0%, transparent 20%);
+    background: linear-gradient(to right, var(--bg-secondary) 0%, transparent 20%);
   }
 
   .hero-stat-block {
     position: absolute;
     bottom: 3rem;
     right: 3rem;
-    background: var(--white);
-    border: 1px solid var(--rule);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     padding: 1.5rem 2rem;
     text-align: right;
   }
@@ -264,7 +264,7 @@
     font-size: 0.6rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--mid-grey);
+    color: var(--text-muted);
     margin-top: 0.25rem;
   }
 
@@ -296,7 +296,7 @@
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 300;
     line-height: 1.15;
-    color: var(--dark);
+    color: var(--text-primary);
     margin-bottom: 3rem;
   }
 
@@ -304,7 +304,7 @@
 
   /* ─── ABOUT ───────────────────────────────────────── */
   #about {
-    background: var(--white);
+    background: var(--bg-primary);
     display: grid;
     grid-template-columns: 1fr 1.4fr;
     gap: 6rem;
@@ -339,8 +339,8 @@
     position: absolute;
     top: -1rem;
     left: -1rem;
-    background: var(--dark);
-    color: var(--white);
+    background: var(--text-primary);
+    color: var(--bg-primary);
     padding: 0.75rem 1rem;
     font-family: 'DM Mono', monospace;
     font-size: 0.6rem;
@@ -351,7 +351,7 @@
   .about-body p {
     font-size: 1rem;
     line-height: 1.9;
-    color: var(--ink);
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
   }
 
@@ -360,7 +360,7 @@
     font-size: 1.35rem;
     font-weight: 400;
     line-height: 1.65;
-    color: var(--dark);
+    color: var(--text-primary);
   }
 
   .credentials {
@@ -377,9 +377,9 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.7rem;
     letter-spacing: 0.05em;
-    color: var(--mid-grey);
+    color: var(--text-muted);
     padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--rule);
+    border-bottom: 1px solid var(--border-color);
   }
 
   .credential-item .dot {
@@ -391,7 +391,7 @@
 
   /* ─── WORK / EXPERIENCE ───────────────────────────── */
   #work {
-    background: var(--off-white);
+    background: var(--bg-secondary);
   }
 
   .work-grid {
@@ -401,7 +401,7 @@
   }
 
   .work-card {
-    background: var(--white);
+    background: var(--bg-card);
     padding: 2.5rem;
     border-top: 3px solid transparent;
     transition: border-color 0.2s, transform 0.2s;
@@ -427,14 +427,14 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--dark);
+    color: var(--text-primary);
     margin-bottom: 0.4rem;
     line-height: 1.2;
   }
 
   .work-card-company {
     font-size: 0.8rem;
-    color: var(--mid-grey);
+    color: var(--text-muted);
     margin-bottom: 1.25rem;
     font-weight: 400;
   }
@@ -442,7 +442,7 @@
   .work-card-desc {
     font-size: 0.9rem;
     line-height: 1.75;
-    color: var(--ink);
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
   }
 
@@ -467,7 +467,7 @@
     font-size: 0.55rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--mid-grey);
+    color: var(--text-muted);
     margin-top: 0.2rem;
   }
 
@@ -555,7 +555,7 @@
 
   /* ─── SKILLS ──────────────────────────────────────── */
   #skills {
-    background: var(--white);
+    background: var(--bg-primary);
   }
 
   .skills-layout {
@@ -567,7 +567,7 @@
   .skills-intro p {
     font-size: 0.95rem;
     line-height: 1.85;
-    color: var(--mid-grey);
+    color: var(--text-muted);
     margin-bottom: 1rem;
   }
 
@@ -585,7 +585,7 @@
     color: var(--accent);
     margin-bottom: 0.75rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--rule);
+    border-bottom: 1px solid var(--border-color);
   }
 
   .skill-pills {
@@ -597,20 +597,20 @@
   .pill {
     font-size: 0.78rem;
     padding: 0.35rem 0.85rem;
-    background: var(--off-white);
-    border: 1px solid var(--rule);
-    color: var(--ink);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
     transition: background 0.15s, border-color 0.15s;
   }
 
   .pill:hover {
-    background: var(--accent-pale);
+    background: var(--stat-bg);
     border-color: var(--accent-light);
   }
 
   /* ─── COMMUNITY ───────────────────────────────────── */
   #community {
-    background: var(--accent-pale);
+    background: var(--bg-secondary);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
@@ -642,7 +642,7 @@
   .community-body p {
     font-size: 0.95rem;
     line-height: 1.85;
-    color: var(--ink);
+    color: var(--text-secondary);
     margin-bottom: 1.25rem;
   }
 
@@ -650,13 +650,13 @@
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.25rem;
     font-weight: 400;
-    color: var(--dark);
+    color: var(--text-primary);
     line-height: 1.6;
   }
 
   /* ─── CONTACT ─────────────────────────────────────── */
   #contact {
-    background: var(--white);
+    background: var(--bg-primary);
     text-align: center;
     padding: 8rem 6rem;
   }
@@ -679,7 +679,7 @@
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     font-weight: 300;
     line-height: 1.1;
-    color: var(--dark);
+    color: var(--text-primary);
     margin-bottom: 1.5rem;
     max-width: 700px;
     margin-left: auto;
@@ -690,7 +690,7 @@
 
   .contact-sub {
     font-size: 1rem;
-    color: var(--mid-grey);
+    color: var(--text-muted);
     margin-bottom: 3rem;
     max-width: 480px;
     margin-left: auto;
@@ -710,7 +710,7 @@
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--mid-grey);
+    color: var(--text-muted);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -724,7 +724,7 @@
 
   /* ─── FOOTER ──────────────────────────────────────── */
   footer {
-    border-top: 1px solid var(--rule);
+    border-top: 1px solid var(--border-color);
     padding: 1.5rem 6rem;
     display: flex;
     justify-content: space-between;
@@ -735,14 +735,14 @@
     font-family: 'DM Mono', monospace;
     font-size: 0.6rem;
     letter-spacing: 0.1em;
-    color: var(--mid-grey);
+    color: var(--text-muted);
   }
 
   .footer-made {
     font-family: 'DM Mono', monospace;
     font-size: 0.6rem;
     letter-spacing: 0.1em;
-    color: var(--light-grey);
+    color: var(--text-muted);
   }
 
   /* ─── ANIMATIONS ──────────────────────────────────── */
