@@ -246,8 +246,16 @@
     filter: grayscale(15%);
   }
 
+  /* Shared photo frame */
+  .hero-photo,
+  .about-photo,
+  .community-photo {
+    border: 2px solid var(--accent-light);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+
   /* ─── SECTION SHARED ──────────────────────────────── */
-  section { padding: 7rem 6rem; }
+  section { padding: 5rem 6rem; }
 
   .section-label {
     font-family: 'DM Mono', monospace;
@@ -531,6 +539,25 @@
     padding: 0.3rem 0.7rem;
   }
 
+  .ai-card-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(196,135,58,0.3);
+    padding-bottom: 0.15rem;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .ai-card-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
   /* ─── SKILLS ──────────────────────────────────────── */
   #skills {
     background: var(--bg-primary);
@@ -586,6 +613,9 @@
     border-color: var(--accent-light);
   }
 
+  #skills .section-label { justify-content: center; }
+  #skills .section-title { text-align: center; margin-bottom: 2rem; }
+
   /* ─── COMMUNITY ───────────────────────────────────── */
   #community {
     background: var(--bg-secondary);
@@ -636,7 +666,7 @@
   #contact {
     background: var(--bg-primary);
     text-align: center;
-    padding: 8rem 6rem;
+    padding: 6rem 6rem;
   }
 
   #contact .section-label {
@@ -700,6 +730,72 @@
 
   .contact-link .arrow { font-size: 0.8rem; }
 
+  .contact-form {
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: var(--accent);
+  }
+
+  .contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+
+  .contact-form button {
+    align-self: flex-start;
+    padding: 0.85rem 2rem;
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .contact-form button:hover {
+    background: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  .contact-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+  }
+
+  .contact-note a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .contact-note a:hover {
+    text-decoration: underline;
+  }
+
   /* ─── FOOTER ──────────────────────────────────────── */
   footer {
     border-top: 1px solid var(--border-color);
@@ -754,7 +850,7 @@
     .hero-right { order: -1; width: 200px; max-width: 200px; align-self: center; }
     .hero-left { padding: 0; }
 
-    section { padding: 5rem 2rem; }
+    section { padding: 3.5rem 2rem; }
     #about { grid-template-columns: 1fr; gap: 3rem; }
     .about-left { position: static; }
     .work-grid { grid-template-columns: 1fr; }
@@ -937,6 +1033,8 @@
       <h3 class="ai-card-title">Renovation ROI Analyzer</h3>
       <p class="ai-card-desc">Used ChatGPT to produce a comprehensive renovation planning spreadsheet for a duplex project, including itemized cost estimates, a full supply list, projected ROI, and a breakeven analysis. Completed weeks of manual research and project planning in 48 hours.</p>
       <span class="ai-card-tag">ChatGPT · Financial Modeling · Real Estate</span>
+      <br>
+      <a href="https://docs.google.com/spreadsheets/d/1VRAMCVcLAdynGSPU_LLMgJOiiZuiYMJu/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="ai-card-link">View the Spreadsheet →</a>
     </div>
 
   </div>
@@ -1025,15 +1123,13 @@
   <p class="section-label reveal">Contact</p>
   <h2 class="contact-headline reveal">Let's build something<br><em>worth building.</em></h2>
   <p class="contact-sub reveal">I'm actively looking for my next role in digital product management, growth, or strategy. If you're building something interesting — let's talk.</p>
-  <div class="hero-ctas" style="justify-content:center; margin-bottom: 2rem;">
-    <a href="mailto:CentersTrajan@gmail.com" class="btn-primary">Email Me</a>
-    <a href="https://linkedin.com/in/trajancenters" target="_blank" class="btn-secondary">LinkedIn</a>
-  </div>
-  <div class="contact-links reveal">
-    <a href="mailto:CentersTrajan@gmail.com" class="contact-link"><span class="arrow">→</span> CentersTrajan@gmail.com</a>
-    <a href="tel:2693529200" class="contact-link"><span class="arrow">→</span> (269) 352-9200</a>
-    <a href="https://linkedin.com/in/trajancenters" target="_blank" class="contact-link"><span class="arrow">→</span> linkedin.com/in/trajancenters</a>
-  </div>
+  <form class="contact-form reveal" action="https://formspree.io/f/meerrljl" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <p class="contact-note reveal">Prefer LinkedIn? Connect with me at <a href="https://linkedin.com/in/trajancenters" target="_blank" rel="noopener noreferrer">linkedin.com/in/trajancenters</a></p>
 </section>
 
 <!-- ─── FOOTER ─────────────────────────────────────── -->
