@@ -908,6 +908,42 @@ const TWEAKS = /*EDITMODE-BEGIN*/{
     object-position: 30% 25%;
   }
 
+  .community-photo-card {
+    border: 1px solid var(--rule);
+    background: var(--card);
+    overflow: hidden;
+  }
+  .community-photo-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    filter: saturate(0.92) contrast(1.02);
+    transition: transform .8s ease;
+  }
+  .community-photo-card:hover img { transform: scale(1.03); }
+  .community-photo-caption {
+    padding: 16px 20px;
+    border-top: 1px solid var(--rule-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .caption-name {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .caption-sub {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+
   .community-copy {
     display: flex; flex-direction: column; gap: 20px;
     font-size: 16px; color: var(--ink-soft); line-height: 1.6;
@@ -1251,7 +1287,7 @@ const TWEAKS = /*EDITMODE-BEGIN*/{
         <div class="about-aside">
           <div class="pullquote">
             <span class="mark">“</span>
-            I'd rather look uninformed for thirty seconds than make the wrong call for three months.
+            Never forget your 5 P's: Proper Planning Prevents Poor Performance.
           </div>
 
           <div class="now-block">
@@ -1539,14 +1575,11 @@ const TWEAKS = /*EDITMODE-BEGIN*/{
 
       <div>
         <div class="eyebrow">Community — Beyond the Résumé</div>
-        <div class="quote-card" style="margin-top:28px;">
-          <div class="q">My commitment to service didn't end with the Army. In 2024, I was recognized by Michigan State Representative Stephanie A. Young for community contributions in Detroit — the kind of acknowledgment that means more to me than most professional achievements.</div>
-          <div class="attribution">
-            <div class="att-img"><img src="Resized_20240918_193229_1726702384978.jpeg" alt="Trajan with Rep. Stephanie A. Young"></div>
-            <div>
-              <div style="color:var(--ink);">Stephanie A. Young</div>
-              <div style="margin-top:3px;">Michigan State Rep. · 2024</div>
-            </div>
+        <div class="community-photo-card">
+          <img src="Resized_20240918_193229_1726702384978.jpeg" alt="Trajan Centers with Michigan State Rep. Stephanie A. Young" />
+          <div class="community-photo-caption">
+            <span class="caption-name">Stephanie A. Young</span>
+            <span class="caption-sub">Michigan State Rep. · 2024</span>
           </div>
         </div>
       </div>
